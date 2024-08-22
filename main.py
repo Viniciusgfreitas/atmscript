@@ -32,8 +32,8 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 @app.post("/teste")
 def teste():
-    return ("Teste Texto para o gustavo")
+    return ("Teste Texto")
   
 @app.post("/teste2")
-def testando():
+def teste2():
     return banking.teste2()
