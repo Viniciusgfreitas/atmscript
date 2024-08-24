@@ -2,6 +2,7 @@ from typing import Union
 from fastapi import FastAPI
 
 import banking
+import user
 
 app = FastAPI()
 
@@ -37,3 +38,7 @@ def teste():
 @app.post("/teste2")
 def teste2():
     return banking.teste2()
+
+@app.get("/userTeste")
+def userTeste():
+    return user.userTeste()
