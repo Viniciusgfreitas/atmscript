@@ -11,6 +11,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/userTeste")
-def userTeste():
-    return {"Hello": "World Teste user"}
+@app.get("/B")
+def B():
+    return {"CHAMANDO B"}

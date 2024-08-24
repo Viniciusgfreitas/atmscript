@@ -1,8 +1,8 @@
 from typing import Union
 from fastapi import FastAPI
 
-import banking
-import user
+import banking # FUNÇÕES QUE CONTROLA AS TRANSAÇÕES E CONSULTA DE DADOS
+import user    # FUNÇÕES DE BUSCA DE DADOS DO USUARIO
 
 app = FastAPI()
 
@@ -26,19 +26,20 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+# @app.get("/items/{item_id}")
+# def read_item(item_id: int, q: Union[str, None] = None):
+#     return {"item_id": item_id, "q": q}
 
 
-@app.post("/teste")
-def teste():
-    return ("Teste Texto")
+# @app.post("/teste")
+# def teste():
+#     return ("Teste Texto")
   
-@app.post("/teste2")
-def teste2():
-    return banking.teste2()
+# @app.post("/teste2")
+# def teste2():
+#     return banking.teste2()
 
-@app.get("/userTeste")
-def userTeste():
-    return user.userTeste()
+@app.get("/A")
+def A():
+    # return ("CHAMANDO A")
+    return user.B()
